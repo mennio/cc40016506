@@ -3,7 +3,7 @@
 interface cookingReferenceRetriever{
     public Map<String, CookingReference> retrieveFromIngredient(String ingredient);
 }
-class CookingReference{
+class AdapterCookingRef{
     private String id;
     private List<String> requirements;
     private String instructions;
@@ -53,4 +53,14 @@ class Recipe {
 
         public List<String> steps()
 }
+
+class Client{
+
+}
+  cookingReferenceRetriever <|-- Client
+GrossBouf --> Recipe
+Marmitor --> Recette
+cookingReferenceRetriever <|.. AdapterCookingRef
+GrossBouf <|.. AdapterCookingRef
+ Marmitor <|.. AdapterCookingRef
 @enduml
