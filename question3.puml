@@ -1,0 +1,48 @@
+@startuml
+
+interface cookingReferenceRetriever{
+    public Map<String, CookingReference> retrieveFromIngredient(String ingredient);
+}
+class AdapterCookingRef{
+    private String id;
+    private List<String> requirements;
+    private String instructions;
+    public CookingReference()
+     String id()
+     List<String> requirements()
+     String instructions()
+}
+
+class GrossBouf{
+        private static Recipe r1 ;
+        private static Recipe r2 ;
+        private static Map<String, Recipe> references;
+        public List<Recipe> find(String ingredient)
+
+}
+
+class Marmitor{
+        private static Recette r1;
+        private static Map<String, Recette> recettes;
+        public List<Recette> rechercher(String ingredient)
+}
+class Main{
+}
+
+class Client {
+}
+
+interface Builder{
+
+}
+
+class Builder{
+
+}
+  cookingReferenceRetriever <|-- Client
+GrossBouf --> Recipe
+Marmitor --> Recette
+cookingReferenceRetriever <|.. AdapterCookingRef
+GrossBouf <|.. AdapterCookingRef
+ Marmitor <|.. AdapterCookingRef
+@enduml

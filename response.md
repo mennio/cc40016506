@@ -19,6 +19,8 @@ Dans ce cas la , adapter va permttre de convertir l'objet pour qu il soit compri
 L'objet est donc encapsulé pour eviter des conversions trop complexe.
 
 Question 3 :
-    Builder
+    J'ai choisi d'utiliser le patron builder car pour construire et/ou ecrire un memoire il y a plusieurs etapes intermediaire
+à réaliser comme par exemple les champs obligatoire titre, auteur, introduction et conclusion. Il y aura une methode pour 
+chaque partie. Le builder va rassembler toutes ces parties pour construire le mémoire.
 
 Question 4 :
