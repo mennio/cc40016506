@@ -1,27 +1,56 @@
 @startuml
-'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+interface cookingReferenceRetriever{
+    public Map<String, CookingReference> retrieveFromIngredient(String ingredient);
+}
+class CookingReference{
+    private String id;
+    private List<String> requirements;
+    private String instructions;
+    public CookingReference()
+     String id()
+     List<String> requirements()
+     String instructions()
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class GrossBouf{
+        private static Recipe r1 ;
+        private static Recipe r2 ;
+        private static Map<String, Recipe> references;
+        public List<Recipe> find(String ingredient)
+
 }
 
+class Marmitor{
+        private static Recette r1;
+        private static Map<String, Recette> recettes;
+        public List<Recette> rechercher(String ingredient)
+}
+class Recette{
+    private String nom;
+        private Set<String> ingredients;
+        private String description;
+
+        public Recette(String nom, Set<String> ingredients, String description)
+
+        public String nom()
+
+        public Set<String> ingredients()
+
+        public String description()
+}
+
+class Recipe {
+    private String identifier;
+        private Map<String, Integer> ingredients;
+        private List<String> steps;
+
+        public Recipe(String identifier, Map<String, Integer> ingredients, List<String> steps)
+
+        public String identifier()
+
+        public Map<String, Integer> ingredients()
+
+        public List<String> steps()
+}
 @enduml

@@ -12,10 +12,13 @@ une contrainte spécifier dans les sujet. Il n'y aura que un type de serealizeur
 le client ne pourra pas agir sur cette contrainte.
 
 Question 2 :
-    Adapter
+
+J'ai choisi d'utiliser le patron adapter car il va permttre de changer le comportement d'un objet.
+On peut dire qu'il va adapter l'interface de l'objet CookingReference pour que les autres objet puisse le comprendre.
+Dans ce cas la , adapter va permttre de convertir l'objet pour qu il soit compris par grossbouf et Marmitor.
+L'objet est donc encapsulé pour eviter des conversions trop complexe.
 
 Question 3 :
     Builder
 
 Question 4 :
-    Strategy
